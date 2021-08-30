@@ -1,0 +1,75 @@
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+  }
+  .weather-app {
+    display: inline-block;
+    margin: 0;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 15px;
+  }
+  .todays-forecast {
+    font-size: 24px;
+    margin: 10px 10px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .degree {
+    font-weight: 200;
+    font-size: 18px;
+  }
+  .sun-icon {
+    color: rgb(255, 234, 4);
+    font-size: 48px;
+    padding: 10px 20px;
+  }
+  .row {
+    justify-content: center;
+    margin: 0 0 20px;
+  }
+  .weather-stats {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .daily-weather {
+    font-size: 18px;
+  }
+  .current-button {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #0dce0dc9;
+    border-color: #0dce0dc9;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 3px 10px;
+  }
+  .btn-primary {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #fff;
+    display: inline-block;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin: 0 0 0 10px;
+    padding: 3px 10px;
+  }
+  .temperature {
+    color: rgb(33, 33, 33);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  #fahrenheit-link {
+    font-size: 18px;
+    position: relative;
+    top: -34px;
+  }
+  
