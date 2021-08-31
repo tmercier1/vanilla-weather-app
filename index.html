@@ -37,52 +37,28 @@
               <button type="submit" class="btn btn-primary">Search</button>
             </div>
             <div class="col-2">
-              <button type="submit" class="btn btn-primary">Current</button>
+              <button type="submit" class="current-button">Current</button>
             </div>
           </div>
         </form>
         <h1><span class="city" id="city"></span></h1>
         <h2></h2>
         <h3>
-          <span class="temperature" id="temperature"> </span>
-          <a href="#" id="fahrenheit-link">°F</a>
+          <span class="weather-temperature">
+          <span class="temperature" id="temperature"></span>
+          <span class="units"><a href=# id="celsius-link">°C</a> | <a href=# id="fahrenheit-link" class="active">°F</a></span></span>
         </h3>
-        <i class="fas fa-sun sun-icon"></i>
+        <img src="" id="icon" />
         <br />
         <div class="todays-forecast" id="todays-forecast">Sunny</div>
         <div class="row weather-stats">
           <div class="col-auto">Wind: <span id="wind">12</span>mph</div>
           <div class="col-auto">Humidity: <span id="humidity">21</span>%</div>
         </div>
-        <div class="row daily-weather">
-          <div class="col-auto">
-            Monday
-            <div><i class="fas fa-sun sun-icon"></i></div>
-            <div class="degree">99°F</div>
-          </div>
-          <div class="col-auto">
-            Tuesday
-            <div><i class="fas fa-sun sun-icon"></i></div>
-            <div class="degree">80°F</div>
-          </div>
-          <div class="col-auto">
-            Wednesday
-            <div><i class="fas fa-sun sun-icon"></i></div>
-            <div class="degree">77°F</div>
-          </div>
-          <div class="col-auto">
-            Thursday
-            <div><i class="fas fa-sun sun-icon"></i></div>
-            <div class="degree">99°F</div>
-          </div>
-          <div class="col-auto">
-            Friday
-            <div><i class="fas fa-sun sun-icon"></i></div>
-            <div class="degree">97°F</div>
           </div>
         </div>
-      </div>
-    </div>
-    <link rel="script" href="src/app.js" />
+    <small>
+      <a href="https://github.com/tmercier1/vanilla-weather-app" target="_blank">Open-sourced code</a> and <a href="https://app.netlify.com/sites/thirsty-joliot-689120/deploys/612d6e4c673ded1dcb3c3b1c">hosted on Netlify</a> by Tiffany Mercier</small>
+    <script src="src/app.js"></script>
   </body>
 </html>
