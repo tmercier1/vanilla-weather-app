@@ -24,7 +24,36 @@ function formatDate(now) {
   
     return h2.innerHTML;
   }
-  console.log(formatDate(new Date()));
+  formatDate(new Date());
+
+  function displayForecast(response) {
+    let forecastElement = document.querySelector("#forecast");
+
+    let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+
+    let forecastHTML = `<div class="row">`;
+    days.forEach(function(day) {
+    forecastHTML = forecastHTML + `
+    <div class="col-2">
+      <div class="weather-forecast-date">
+        ${day}
+        </div>
+      <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="48" />
+      <div class="weather-forecast-temperatures">
+      <span class="weather-forecast-max"> 
+        18º </span> 
+        <span class="weather-forecast-min"> 
+        12º
+        </span>
+    </div>
+    </div>
+  `;
+});
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+  }
 
   function search(city) {
     let apiKey = "d617c3d443d0373f72548b3cda3fe85a";
@@ -39,6 +68,13 @@ function formatDate(now) {
     let cityElement = document.querySelector("#city-input");
     search(cityElement.value);
   
+  }
+
+  function getForecast(coordinates) {
+    let apiKey = "d617c3d443d0373f72548b3cda3fe85a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+    
+    axios.get(apiUrl).then(displayForecast);
   }
   
   function showWeather(response) {
@@ -60,13 +96,16 @@ function formatDate(now) {
 
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 
     fahrenheitTemperature = response.data.main.temp;
+
+    getForecast(response.data.coord)
   }
   
   function showPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    let latitude = position.coord.latitude;
+    let longitude = position.coord.longitude;
     let apiKey = "d617c3d443d0373f72548b3cda3fe85a";
     let units = "imperial";
     let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather`;
@@ -112,3 +151,4 @@ function formatDate(now) {
   searchForm.addEventListener("submit", handleSubmit);
 
   search("Los Angeles");
+  displayForecast ();
