@@ -41,7 +41,7 @@ h2 {
     font-size: 16px;
     font-weight: 300;
   }
-.current-button {
+#current-button {
     border: 1px solid transparent;
     border-radius: 0.25rem;
     color: #fff;
