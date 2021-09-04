@@ -41,9 +41,6 @@ h2 {
     font-size: 16px;
     font-weight: 300;
   }
-.daily-weather {
-    font-size: 18px;
-  }
 .current-button {
     border: 1px solid transparent;
     border-radius: 0.25rem;
@@ -82,5 +79,19 @@ small {
   color: black;
   cursor: default;
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 18px;
+}
+.weather-forecast-temperatures {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.weather-forecast-min {
+  opacity: 0.6;
 }
   
